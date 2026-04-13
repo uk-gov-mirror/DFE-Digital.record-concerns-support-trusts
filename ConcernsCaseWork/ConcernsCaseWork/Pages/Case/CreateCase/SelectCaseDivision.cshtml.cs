@@ -103,7 +103,7 @@ public class SelectCaseDivisionPageModel : CreateCaseBasePageModel
 		var radioItems = new List<SimpleRadioItem>()
 		{
 			new SimpleRadioItem("SFSO (Schools Financial Support and Oversight)", (int)Division.SFSO) { TestId = Division.SFSO.ToString() },
-			new SimpleRadioItem("Regions Group", (int)Division.RegionsGroup) { TestId = Division.RegionsGroup.ToString() },
+			new SimpleRadioItem("School delivery teams", (int)Division.RegionsGroup) { TestId = Division.RegionsGroup.ToString() },
 		};
 
 		return new(ElementRootId: "case-division", Name: nameof(CaseDivision), "Who is managing this case?")

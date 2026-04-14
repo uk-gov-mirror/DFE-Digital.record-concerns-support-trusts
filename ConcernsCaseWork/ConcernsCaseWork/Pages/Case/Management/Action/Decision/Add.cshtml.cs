@@ -436,7 +436,7 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision
 
 		private static OptionalDateTimeUiComponent BuildReceivedRequestDateComponent(OptionalDateModel? date = null)
 		{
-			return new OptionalDateTimeUiComponent("request-received", nameof(ReceivedRequestDate), "When did SFSO (Schools Financial Support and Oversight) receive the request?")
+			return new OptionalDateTimeUiComponent("request-received", nameof(ReceivedRequestDate), "When did the department receive the request?")
 			{
 				Date = date,
 				DisplayName = "Date SFSO received request"

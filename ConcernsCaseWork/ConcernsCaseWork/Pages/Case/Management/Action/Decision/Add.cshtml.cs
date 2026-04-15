@@ -307,7 +307,7 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision
 				new DecisionTypeQuestionModel()
 				{
 					Id = DecisionType.OtherFinancialSupport,
-					Hint = "All other types of financial support for exceptional circumstances. This includes exceptional annual grant (EAG), general annual grant (GAG) protection, popular growth funding, restructuring support and start-up support."
+					Hint = "All other types of financial support for exceptional circumstances. This includes exceptional annual grant (EAG), general annual grant (GAG) protection, popular growth funding, restructuring support, start-up support and changes to a repayment schedule."
 				},
 				new DecisionTypeQuestionModel()
 				{

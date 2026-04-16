@@ -26,7 +26,7 @@ describe('Creating a case', () => {
         cy.acceptCookies();
     });
 
-    it('Should validate adding a case', () => {
+    it.only('Should validate adding a case', () => {
         Logger.log('Checking accessibility on home page');
         cy.excuteAccessibilityTests();
 
@@ -53,7 +53,7 @@ describe('Creating a case', () => {
         createCaseSummary.hasTrustSummaryDetails('Ashton West End Primary Academy').hasManagedBy('SFSO', '');
 
         Logger.log('Check unpopulated territory throws validation error');
-        addTerritoryPage.nextStep().hasValidationError('Select SFSO territory');
+        addTerritoryPage.nextStep().hasValidationError('Select SFSO Operational Delivery Division');
 
         Logger.log('Checking accessibility on territory');
         cy.excuteAccessibilityTests();

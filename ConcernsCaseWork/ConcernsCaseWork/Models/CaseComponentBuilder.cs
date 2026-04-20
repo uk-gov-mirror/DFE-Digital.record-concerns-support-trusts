@@ -31,12 +31,12 @@ namespace ConcernsCaseWork.Models
 					return new SimpleRadioItem(v.Description(), (int)v) { TestId = v.Description() };
 				}).ToArray();
 
-			return new(ElementRootId: "territory", name, "Which SFSO territory is managing this case?")
+			return new(ElementRootId: "territory", name, "Which SFSO Operational Delivery Division is managing this case?")
 			{
 				RadioItems = radioItems,
 				SelectedId = selectedId,
 				Required = true,
-				DisplayName = "SFSO territory"
+				DisplayName = "SFSO Operational Delivery Division"
 			};
 		}
 

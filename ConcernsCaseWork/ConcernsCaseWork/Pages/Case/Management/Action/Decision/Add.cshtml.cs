@@ -292,7 +292,7 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision
 				new DecisionTypeQuestionModel()
 				{
 					Id = DecisionType.RepayableFinancialSupport,
-					Hint = "Trusts must pay back repayable funding in line with an agreed repayment plan, ideally within 3 years. Select this decision type for decisions related to existing repayable financial support, such as change to repayment schedule or drawdown of previously agreed funding."
+					Hint = "Select this decision type for decisions relating to repayable financial support, such as a new package or drawdown from an existing package."
 				},
 				new DecisionTypeQuestionModel()
 				{
@@ -302,13 +302,12 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision
 				new DecisionTypeQuestionModel()
 				{
 					Id = DecisionType.WriteOffRecoverableFunding,
-					Hint = "A write-off can be considered if a trust cannot repay financial support previously received from us."
-
+					Hint = "Recovery should be considered in line with guidance."
 				},
 				new DecisionTypeQuestionModel()
 				{
 					Id = DecisionType.OtherFinancialSupport,
-					Hint = "All other types of financial support for exceptional circumstances. This includes exceptional annual grant (EAG), general annual grant (GAG) protection, popular growth funding, restructuring support and start-up support."
+					Hint = "All other types of financial support for exceptional circumstances. This includes exceptional annual grant (EAG), general annual grant (GAG) protection, popular growth funding, restructuring support, start-up support and changes to a repayment schedule."
 				},
 				new DecisionTypeQuestionModel()
 				{
@@ -319,7 +318,7 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision
 				new DecisionTypeQuestionModel()
 				{
 					Id = DecisionType.EsfaApproval,
-					Hint = "Some versions of the funding agreement require trusts to seek approval from SFSO to spend or write off funds (also called transactions approval). Examples include as severance pay, compromise agreements or ex gratia payments; agreeing off-payroll arrangements for staff; entering into a finance lease or operating lease; or carrying forward large reserves. Trusts going ahead with these decisions or transactions without SFSO approval could be in breach of their funding agreement. This typically affects trusts under an NTI (Notice to Improve), where SFSO approval can be a condition of the NTI."
+					Hint = "Some versions of the funding agreement require trusts to seek approval from DfE to spend or write off funds (also called transactions approval). Examples include as severance pay, compromise agreements or ex gratia payments; agreeing off-payroll arrangements for staff; entering into a finance lease or operating lease; or carrying forward large reserves."
 				},
 				new DecisionTypeQuestionModel()
 				{
@@ -437,7 +436,7 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision
 
 		private static OptionalDateTimeUiComponent BuildReceivedRequestDateComponent(OptionalDateModel? date = null)
 		{
-			return new OptionalDateTimeUiComponent("request-received", nameof(ReceivedRequestDate), "When did SFSO (Schools Financial Support and Oversight) receive the request?")
+			return new OptionalDateTimeUiComponent("request-received", nameof(ReceivedRequestDate), "When did the department receive the request?")
 			{
 				Date = date,
 				DisplayName = "Date SFSO received request"
@@ -447,7 +446,7 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision
 		private static TextAreaUiComponent BuildNotesComponent(string contents = "")
 		=> new("case-decision-notes", nameof(Notes), "Supporting notes (required)")
 		{
-			HintText = "Case owners can record any information they want that feels relevant to the action.",
+			HintText = "Ensure you have entered all the required information outlined in the guidance for your decision type.",
 			Text = new ValidateableString()
 			{
 				MaxLength = DecisionConstants.MaxSupportingNotesLength,
@@ -563,7 +562,7 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision
 			};
 
 			result.SelectedId = selectedId;
-			result.HintText = "Retrospective approval is needed when a trust or academy makes a change or action before asking SFSO or RG.";
+			result.HintText = "Retrospective approval is needed when a trust or academy makes a change or action before asking the department.";
 
 			return result;
 		}

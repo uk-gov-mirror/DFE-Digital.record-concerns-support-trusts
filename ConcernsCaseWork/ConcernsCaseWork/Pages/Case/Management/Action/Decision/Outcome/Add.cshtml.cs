@@ -109,6 +109,8 @@ namespace ConcernsCaseWork.Pages.Case.Management.Action.Decision.Outcome
 			{
 				if (!ModelState.IsValid)
 				{
+					DecisionOutcome = await CreateDecisionOutcomeModel();
+
 					LoadPageComponents();
 					return Page();
 				}

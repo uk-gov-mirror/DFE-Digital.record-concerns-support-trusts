@@ -144,14 +144,14 @@
 
                 @if (isNotRegionsGroupCase)
                 {
-                    @* Total additional financial support requested/approved *@
+                    @* Total additional financial support requested *@
                     <div class="govuk-form-group" data-testid="container-total-additional-financial-support">
                         <fieldset class="govuk-fieldset" aria-describedby="total-additional-financial-support-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                <h2 class="govuk-heading-m">What was the total additional financial support requested/approved? </h2>
+                                <h2 class="govuk-heading-m">What was the total additional financial support requested? </h2>
                             </legend>
                             <div id="total-additional-financial-support-hint" class="govuk-hint">
-                                If no amount was requested, enter £0.
+                                If no amount was requested, including where a trust is seeking approval to spend their own funds, enter £0.
                             </div>
                             <div class="govuk-input__wrapper">
                                 <div class="govuk-input__prefix" aria-hidden="true">£</div>
@@ -160,7 +160,7 @@
                                        name="Decision.TotalAmountRequested"
                                        type="text"
                                        value="@Model.Decision.TotalAmountRequested"
-                                       aria-label="What was the total additional financial support requested/approved">
+                                       aria-label="What was the total additional financial support requested">
                             </div>
                         </fieldset>
                     </div>

@@ -48,7 +48,7 @@ class TeamCaseworkPage {
 
     public hasNoCases(): this {
         Logger.log('Has no team cases');
-        cy.getByTestId('no-cases').should('contain.text', 'There are no cases available.');
+        cy.getByTestId('no-cases').should('contain.text', 'There are no active cases available at this time.');
 
         return this;
     }

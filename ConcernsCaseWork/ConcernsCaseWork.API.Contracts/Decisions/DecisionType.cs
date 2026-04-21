@@ -31,7 +31,7 @@ namespace ConcernsCaseWork.API.Contracts.Decisions
 		[Description("Estimates funding/Pupil Number Adjustment")]
 		EstimatesFundingOrPupilNumberAdjustment = 9,
 
-		[Description("SFSO approval to spend or write-off")]
+		[Description("DfE approval to spend or write off")]
 		EsfaApproval = 10,
 
 		[Description("Freedom of Information exemptions (FOI) ")]
